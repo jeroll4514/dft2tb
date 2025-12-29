@@ -5,12 +5,14 @@ This repository contains the FORTRAN code developed for my honors undergraduate 
 ## How to compile
 Make sure you are within an environment (e.g. conda) that includes the gfortran compiler for FORTRAN and includes the LAPACK library.  When in the main directory, type
 - make $\leftarrow$ compiles the project
+- make clean $\leftarrow$ removes all executables and object files created within the compilation process.
 
-## Files
-- `find_tb.f90`: converts .HSX into tight-binding parameters.
-- `hsx2hsx.f90`: calls the modules to convert a file named `HSX` in machine code into a file named `HSX_out` in human code.
-- `hsx_m.f90`: this contains all of the work in reading in the machine code and turn it into human code; slightly modified from the `SIESTA` source code.
-- `tb2bands.f90`: converts tight-binding parameters into a bandstructure.
+All executables are stored within the `executables/` directory upon compilation.
+
+## Directories
+- `build`: upon compilation will store all .o and .mod files
+- `executables`: upon compilation will store all executables
+- `src`: source codes for all processes
 
 ## `SIESTA` version notice
 In any version of Siesta newer than 5.0 the HSX file structure has changed.
