@@ -2,6 +2,10 @@
 
 This repository contains the FORTRAN code developed for my honors undergraduate senior thesis in physics (Spring 2023).  The code inputs the standard .HSX output from a [SIESTA](https://siesta-project.org/siesta/index.html) DFT calculation and computes tight-binding parameters.  These parameters are determined using the [LCAO method](https://doi.org/10.1103/PhysRev.94.1498) for our two-center integrals: given the Hamiltonian/Overlap matrix elements, we solve for the parameters that yield the closest results.
 
+## How to compile
+Make sure you are within an environment (e.g. conda) that includes the gfortran compiler for FORTRAN and includes the LAPACK library.  When in the main directory, type
+- make $\leftarrow$ compiles the project
+
 ## Files
 - `find_tb.f90`: converts .HSX into tight-binding parameters.
 - `hsx2hsx.f90`: calls the modules to convert a file named `HSX` in machine code into a file named `HSX_out` in human code.
