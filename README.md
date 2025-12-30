@@ -20,4 +20,4 @@ In any version of Siesta newer than 5.0 the HSX file structure has changed.
 It no longer natively supports changing the file from .HSX machine code into human code.  To make this change, I took the 'human' `write_hsx` code from a prior version (hsx.f90 instead of hsx_m.f90) and copied it into the current `hsx_m.f90` code.  I then had to include `hsx%has_xij = .True.` after reading it from the .HSX file or else the code will not complete.
 
 ### Notes
-This code reflects my early training in scientific computing and predates my current C++-based research framework.  I did not use Git at the time of its development, so I made a Makefile then got everything uploaded here.  This work is preserved here as a record of my development as a computational scientist.
+This code reflects my early training in scientific computing and predates my current C++-based research framework.  Originally developed during my 2022–2023 honors thesis. I later added a Makefile and reorganized the repository for reproducibility and archival.  This work is preserved here as a record of my development as a computational scientist.
