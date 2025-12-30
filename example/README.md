@@ -11,7 +11,7 @@ This will generate two folders:
 1. build: this contains all .o and .mod files during compilation process
 2. executables: this contains all executables we will need to call.
 
-We need to move the executables into our running directory to ensure the proper files are inputted.
+We need to copy the executables into each example directory to ensure relative file paths match the expected input structure.
 
 ```bash
 cp executables/make_hsx_readable example/ex_1_siesta

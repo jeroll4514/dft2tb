@@ -21,6 +21,23 @@ All executables are stored within the `executables` directory upon compilation.
 - `executables`: upon compilation, will store all executables
 - `src`: source codes for all processes
 
+## Example workflow (end-to-end)
+
+A complete worked example is provided in the `example/` directory, demonstrating
+the full workflow:
+
+1. Run a SIESTA DFT calculation and extract Hamiltonian/overlap matrices.
+2. Convert binary HSX output into a human-readable format.
+3. Generate tight-binding parameters and compute the resulting band structure.
+
+Each step is documented with copy-paste commands and explanations in the
+corresponding subdirectories:
+
+- `example/ex_1_siesta/`
+- `example/ex_2_hsx2tb/`
+
+This example uses monolayer SnS as a reference system.
+
 ## Citation
 
 If you use this code in academic work, please cite:
