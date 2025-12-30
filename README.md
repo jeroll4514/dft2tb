@@ -2,6 +2,13 @@
 
 This repository contains the FORTRAN code developed for my honors undergraduate senior thesis in physics (Graduated Spring 2023).  The code inputs the standard .HSX output from a [SIESTA](https://siesta-project.org/siesta/index.html) DFT calculation and computes tight-binding parameters.  These parameters are determined using the [LCAO method](https://doi.org/10.1103/PhysRev.94.1498) for our two-center integrals: given the Hamiltonian/Overlap matrix elements, we solve for the parameters that yield the closest results.
 
+## Quickstart
+```bash
+git clone https://github.com/jeroll4514/dft2tb.git
+cd dft2tb
+make
+```
+
 ## How to compile
 Make sure you are within an environment (e.g. conda) that includes the gfortran compiler for FORTRAN and includes the LAPACK library.  When in the main directory, type
 - make $\leftarrow$ compiles the project
