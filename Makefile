@@ -23,11 +23,6 @@ PROGRAM_hsx2tb := hsx2tb
 SRC_hsx2tb := src/hsx2tb.f90
 OBJS_hsx2tb := $(SRC_hsx2tb:src/%.f90=$(MODDIR)/%.o)
 
-# tight-binding parameters --> bandstructure
-PROGRAM_tb2bands := tb2bands
-SRC_tb2bands := src/tb2bands.f90
-OBJS_tb2bands := $(SRC_tb2bands:src/%.f90=$(MODDIR)/%.o)
-
 # Default target
 all: $(PROGRAM_hsx) $(PROGRAM_hsx2tb) $(PROGRAM_tb2bands)
 
@@ -40,9 +35,6 @@ $(PROGRAM_hsx): $(OBJS_hsx) | $(EXEDIR)
 
 $(PROGRAM_hsx2tb): $(OBJS_hsx2tb) | $(EXEDIR)
 	$(FC) $(OBJS_hsx2tb) $(LIBS) -o $(EXEDIR)/$@
-
-$(PROGRAM_tb2bands): $(OBJS_tb2bands) | $(EXEDIR)
-	$(FC) $(OBJS_tb2bands) $(LIBS) -o $(EXEDIR)/$@
 
 # Ensure build directory exists
 $(MODDIR):
