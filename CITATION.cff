@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "dft2tb: Automating Tight-Binding Representations from DFT"
+message: >
+  If you use this code in academic work, please cite the following thesis.
+authors:
+  - family-names: Roll
+    given-names: Joseph
+version: 1.0.0
+date-released: 2023-01-01
+preferred-citation:
+  type: thesis
+  authors:
+    - family-names: Roll
+      given-names: Joseph
+  title: "Automating the determination of tight-binding representations for two-dimensional ferroelectrics"
+  year: 2023
+  institution: University of Arkansas
+  url: https://scholarworks.uark.edu/physuht/22
+

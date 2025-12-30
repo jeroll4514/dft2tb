@@ -1,0 +1,47 @@
+SystemName       SnS
+SystemLabel      SnS
+NumberOfAtoms    4
+NumberOfSpecies  2
+%block ChemicalSpeciesLabel
+    1    50   Sn
+    2    16   S
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant 1.000 Ang
+
+%block LatticeVectors
+          4.3303193121       0.0000000000       0.0000000000
+          0.0000000000       4.0765639097       0.0000000000
+          0.0000000000       0.0000000000      29.9986599786
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat Fractional
+
+%block AtomicCoordinatesAndAtomicSpecies
+  0.5842919766980871  0.5000000000000000  0.5650103852167374  1  50  Sn
+  0.0842919533792021  0.0000000000000000  0.4666663225325179  1  50  Sn
+  0.0000209027691422  0.0000000000000000  0.5528223066392581  2  16  S
+  0.5000208974724912  0.5000000000000000  0.4788543189448270  2  16  S
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+MeshCutoff             600. Ry
+
+%block kgrid_Monkhorst_Pack
+ 18   0    0    0.0
+ 0   18    0    0.0
+ 0    0    1    0.0
+%endblock kgrid_Monkhorst_Pack
+
+xc.functional       GGA
+xc.authors          PBE
+
+MaxSCFIterations    10000
+DM.MixingWeight     0.2
+DM.NumberPulay      3
+DM.MixSCF1          T
+DM.Tolerance        1.d-4
+SolutionMethod      diagon
+
+PAO.BasisSize       SZP
+
+SaveHS              T

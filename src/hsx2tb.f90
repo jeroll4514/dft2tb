@@ -183,13 +183,13 @@ PROGRAM MAIN
     has_d = .FALSE. ! initialize
     allocate(indx(no_u, 3))
 
-    inquire(file='SnS.ORB_INDX', exist=file_exists) ! checks if exists
+    inquire(file='ORB_INDX', exist=file_exists) ! checks if exists
 
     if (file_exists .eqv. .FALSE.) then
-        write(*, '(a38)') 'Error: .ORB_INDX file does not exist'
+        write(*, '(a38)') 'Error: ORB_INDX file does not exist'
         call exit(0)
     end if
-    open(unit=2, file='SnS.ORB_INDX', status='old') ! opens file
+    open(unit=2, file='ORB_INDX', status='old') ! opens file
     read(2, *)
     read(2, *)
     read(2, *)
@@ -634,21 +634,6 @@ PROGRAM MAIN
                    (soe(1)*ssparse(ind_store(kk, 1)) - &
                     soe(3)*ssparse(ind_store(jj, 1))) / &
                    (soe(1)*soe(4)-soe(2)*soe(3))
-
-            !debug block!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            if (ii == 1) then
-            temp1 = (soe(4)*hsparse(ind_store(jj, 1)) - &
-                     soe(2)*hsparse(ind_store(kk, 1))) / &
-                    (soe(1)*soe(4)-soe(2)*soe(3))
-            temp2 = (soe(4)*hsparse(ind_store(jj, 1)) - &
-                    soe(2)*hsparse(ind_store(kk, 1))) / &
-                    (soe(1)*soe(4)-soe(2)*soe(3))
-
-            write(*, '(3f12.6, 8i3)') &
-            distsU(ii, 1), temp1, temp2, ind_store(jj, 4:5), &
-            ind_store(kk, 4:5), ind_store(jj, 2:3), ind_store(kk, 2:3)
-            endif
-            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         endif ! second row
         enddo ! kk

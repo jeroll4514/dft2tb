@@ -21,6 +21,14 @@ All executables are stored within the `executables` directory upon compilation.
 - `executables`: upon compilation, will store all executables
 - `src`: source codes for all processes
 
+## Citation
+
+If you use this code in academic work, please cite:
+
+> J. Roll, *Automating the determination of tight-binding representations for two-dimensional ferroelectrics*,
+> Physics Undergraduate Honors Thesis, University of Arkansas (2023).  
+> https://scholarworks.uark.edu/physuht/22
+
 ## `SIESTA` version notice
 In any version of Siesta newer than 5.0 the HSX file structure has changed.
 

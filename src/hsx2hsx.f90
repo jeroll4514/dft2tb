@@ -14,7 +14,7 @@ use hsx_m, only: read_hsx_file, hsx_t, write_hsx_file
 
 type(hsx_t)  :: h
 
-call read_hsx_file(h,"HSX") 
+call read_hsx_file(h, "HSX") 
 
 call write_hsx_file(h, "HSX_out")
 
