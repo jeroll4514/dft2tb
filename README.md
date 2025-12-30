@@ -18,7 +18,7 @@ All executables are stored within the `executables` directory upon compilation.
 
 ## Directories
 - `build`: upon compilation, will store all .o and .mod files
-- `executables`: upon compilatio,n will store all executables
+- `executables`: upon compilation, will store all executables
 - `src`: source codes for all processes
 
 ## `SIESTA` version notice
