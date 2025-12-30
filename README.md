@@ -7,7 +7,7 @@ Make sure you are within an environment (e.g. conda) that includes the gfortran 
 - make $\leftarrow$ compiles the project
 - make clean $\leftarrow$ removes all executables and object files created within the compilation process.
 
-All executables are stored within the `executables/` directory upon compilation.
+All executables are stored within the `executables` directory upon compilation.
 
 ## Directories
 - `build`: upon compilation will store all .o and .mod files
